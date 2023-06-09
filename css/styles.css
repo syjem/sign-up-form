@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Serif+4:wght@300&display=swap");
+:root {
+  /* Colors */
+  --text-color: #fff;
+  --background-color: #0f172a;
+  --primary-btn: #128fc4;
+  --secondary-text-color: #94a3b8;
+  --accent: #e01f2f;
+
+  /* Fonts */
+  --ff-head: "Oswald", sans-serif;
+  --ff-sub: "Source Serif 4", serif;
+  --fw-bold: 900;
+  --fw-reg: 300;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--ff-head);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==== Typography ==== */
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: 3.5rem;
+  font-family: var(--ff-head);
+}
+
+h3 {
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-head);
+  color: var(--secondary-text-color);
+}
+
+/* ==== Main ===== */
+
+.main {
+  display: flex;
+  max-width: 100%;
+  margin: 2rem;
+}
+
+/* ==== Main Content Section */
+
+.main-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  background: no-repeat url("../imgs/bg.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+}
+
+.nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav .nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.nav-list li a {
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-reg);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ==== Text Intro */
+
+.text-intro {
+  display: flex;
+}
+
+.colored {
+  color: #69f5ff;
+}
+
+h3 i {
+  margin-right: 1em;
+}
+
+.btn {
+  width: 10rem;
+  border: none;
+  border-radius: 0.7em;
+  padding: 0.8rem;
+  font-weight: var(--fw-bold);
+  color: var(--text-color);
+  background-color: var(--primary-btn);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #2ca8dd;
+}
+
+.btn i {
+  margin-right: 0.3em;
+  font-size: 1.3rem;
+  position: relative;
+  top: 0.1em;
+}
+
+.btn-submit {
+  width: 100%;
+}
+
+/* ==== Side Section ==== */
+
+.side {
+  padding: 1rem 3rem;
+  max-width: 100%;
+  flex: 1;
+}
+
+.heading {
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.heading h2 {
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-head);
+}
+
+.heading p {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-sub);
+  color: #e4dfdf;
+}
+
+form {
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--secondary-text-color);
+  color: var(--text-color);
+}
+
+input:focus {
+  outline-color: var(--primary-btn);
+  border: none;
+}
+
+input[type="text"] {
+  flex: 1;
+  margin: 0 0 1.5rem 0;
+}
+
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+}
+
+input[type="password"] {
+  margin: 1.5rem 0 0.3rem 0;
+}
+
+input[type="submit"] {
+  display: block;
+}
+
+.form-group {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-sub-form {
+  width: 100%;
+}
+
+.checkbox {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+label {
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-reg);
+  font-size: 0.7rem;
+}
+
+strong a {
+  font-weight: var(--fw-bold);
+  font-size: 0.8rem;
+  color: var(--primary-btn);
+}
+
+.inner-sub {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-sub);
+  color: #e4dfdf;
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-social {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-social img {
+  width: 1.5rem;
+  margin: 0.5rem;
+}
+
+.list-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="imgs/icons8-form-96.png"
+    />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main-content">
+        <div class="logo">
+          <h3><i class="fa-solid fa-code"></i>First Brackets</h3>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tour</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="text-intro">
+          <h1>
+            <span class="colored">Learn</span> to code. <br />
+            <span class="colored">Interactively.</span><br />
+            For <span class="colored">free.</span>
+          </h1>
+        </div>
+        <button class="btn main-btn">
+          <i class="fa-solid fa-circle-play"></i>Watch Demo
+        </button>
+      </div>
+      <div class="side">
+        <div class="heading">
+          <h2>Join over 25 million learners from around the globe</h2>
+          <p>
+            Master the language of the web: HTML, CSS and JavaScript. This Path
+            will prepare you to build basic websites and then build interactive
+            web apps.
+          </p>
+        </div>
+        <form action="#" method="post">
+          <div class="wrapper-sub-form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Last Name"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <div class="checkbox">
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="terms">
+                I agree to all statements included in
+                <strong><a href="#">Terms of Use</a></strong>
+              </label>
+            </div>
+            <input
+              class="btn btn-submit"
+              type="submit"
+              value="Start Coding Now"
+            />
+          </div>
+          <p class="inner-sub">Or continue with this social profile</p>
+          <ul class="list-btn">
+            <li>
+              <span class="btn-social">
+                <img src="imgs/icons8-google.svg" alt="icons8-google" />
+              </span>
+            </li>
+            <li>
+              <span class="btn-social">
+                <img src="imgs/icons8-facebook.svg" alt="icons8-facebook" />
+              </span>
+            </li>
+            <li>
+              <span class="btn-social">
+                <img src="imgs/icons8-twitter.svg" alt="icons8-twitter" />
+              </span>
+            </li>
+            <li>
+              <span class="btn-social">
+                <img src="imgs/icons8-github.svg" alt="icons8-github" />
+              </span>
+            </li>
+          </ul>
+          <p class="inner-sub">
+            Already a member?<strong><a href="#">Login</a></strong>
+          </p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
