@@ -58,7 +58,7 @@
             to build basic websites and then build interactive web apps.
           </p>
         </div>
-        <form action="#" method="post">
+        <form action="https://www.google.com" method="post">
           <div class="wrapper-sub-form">
             <div class="form-group">
               <input
@@ -83,19 +83,19 @@
               placeholder="Email"
               required
             />
-            <input 
-            type="password" 
-            name="password" 
-            id="password" 
-            placeholder="Password" 
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  
-            required 
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Password must contain at least a number, an uppercase and lowercase letter, a special character, and minimum of 8 characters"
+              required
             />
             <div class="checkbox">
-              <input type="checkbox" name="terms" id="terms" />
-              <label for="terms">
-                I agree to all statements included in
+              <input type="checkbox" name="terms" id="checkbox-terms" />
+              <label for="checkbox-terms">
+                <span class="terms">I agree to all statements included in</span>
                 <strong><a href="#">Terms of Service</a></strong>
               </label>
             </div>

@@ -5,7 +5,7 @@
   --background-color: #0f172a;
   --primary-btn: #128fc4;
   --secondary-text-color: #bdc5d0;
-  --accent: #e01f2f;
+  --accent: #69f5ff;
 
   /* Fonts */
   --ff-head: "Oswald", sans-serif;
@@ -118,7 +118,7 @@ h3 {
 }
 
 .colored {
-  color: #69f5ff;
+  color: var(--accent);
 }
 
 .colored:hover {
@@ -275,6 +275,19 @@ strong a {
 
 span {
   cursor: pointer;
+}
+
+.valid {
+  border-color: var(--accent);
+}
+
+.invalid {
+  border-color: #e01f2f;
+}
+
+.agree {
+  color: #e01f2f;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 874px) {
