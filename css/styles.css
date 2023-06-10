@@ -325,7 +325,7 @@ span {
   }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 600px) {
   .form-group {
     flex-direction: column;
     gap: 0;
