@@ -25,7 +25,7 @@
       <div class="main-content">
         <div class="header">
           <div class="logo">
-            <h3><i class="fa-solid fa-code"></i>First Brackets</h3>
+            <h3><i class="fa-solid fa-code"></i>Jem Sync</h3>
           </div>
         </div>
         <div class="text-intro">
@@ -41,9 +41,9 @@
         <nav class="nav">
           <ul class="nav-list">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Courses</a></li>
-            <li><a href="#">Articles</a></li>
+            <li><a href="#">Tour</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
         </nav>
@@ -52,9 +52,10 @@
         <div class="heading">
           <h2>Join over 25 million learners from around the globe</h2>
           <p>
-            Master the language of the web: <span class="colored">HTML, CSS</span> and <span class="colored">JavaScript</span>. This Path
-            will prepare you to build basic websites and then build interactive
-            web apps.
+            Master the language of the web:
+            <span class="colored">HTML, CSS</span> and
+            <span class="colored">JavaScript</span>. This path will prepare you
+            to build basic websites and then build interactive web apps.
           </p>
         </div>
         <form action="#" method="post">
@@ -72,6 +73,7 @@
                 name="last-name"
                 id="last-name"
                 placeholder="Last Name"
+                required
               />
             </div>
             <input
@@ -81,12 +83,14 @@
               placeholder="Email"
               required
             />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              required
+            <input 
+            type="password" 
+            name="password" 
+            id="password" 
+            placeholder="Password" 
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  
+            required 
             />
             <div class="checkbox">
               <input type="checkbox" name="terms" id="terms" />
@@ -125,7 +129,7 @@
             </li>
           </ul>
           <p class="inner-sub">
-            Already a member?<strong><a href="#">Login</a></strong>
+            Already a member?<strong><a href="#"> Login</a></strong>
           </p>
         </form>
       </div>

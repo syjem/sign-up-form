@@ -4,7 +4,7 @@
   --text-color: #fff;
   --background-color: #0f172a;
   --primary-btn: #128fc4;
-  --secondary-text-color: #94a3b8;
+  --secondary-text-color: #bdc5d0;
   --accent: #e01f2f;
 
   /* Fonts */
@@ -189,13 +189,12 @@ input {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: transparent;
-  border: 1px solid var(--secondary-text-color);
+  border: 2px solid var(--secondary-text-color);
   color: var(--text-color);
 }
 
 input:focus {
   outline-color: var(--primary-btn);
-  border: none;
 }
 
 input[type="text"] {
@@ -277,7 +276,6 @@ strong a {
 span {
   cursor: pointer;
 }
-
 
 @media screen and (max-width: 874px) {
   .main {
