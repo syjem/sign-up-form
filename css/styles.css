@@ -64,7 +64,8 @@ h3 {
 .main {
   display: flex;
   max-width: 100%;
-  margin: 2rem;
+  margin: 2rem 2.5rem;
+  min-width: 330px;
 }
 
 /* ==== Main Content Section */
@@ -118,6 +119,10 @@ h3 {
 
 .colored {
   color: #69f5ff;
+}
+
+.colored:hover {
+  cursor: default;
 }
 
 h3 i {
@@ -254,8 +259,13 @@ strong a {
 }
 
 .btn-social img {
-  width: 1.5rem;
+  width: 2rem;
   margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.btn-social img:hover {
+  box-shadow: 0.2rem 0.2rem 0.5rem rgb(45, 43, 43);
 }
 
 .list-btn {
@@ -266,4 +276,76 @@ strong a {
 
 span {
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 874px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    flex: 1;
+  }
+  .nav {
+    flex: 1;
+    position: relative;
+    top: 0;
+    display: inline;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .nav .nav-list {
+    position: relative;
+    padding: 0;
+  }
+
+  .nav .nav-list li {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .form-group {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .main {
+    margin: 0.2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .side {
+    padding: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .nav .nav-list li {
+    margin: 0;
+  }
+
+  .btn {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+  }
+
+  .btn i {
+    font-size: 0.8rem;
+    top: 0;
+  }
 }
