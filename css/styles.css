@@ -53,10 +53,47 @@ h1 {
   font-family: var(--ff-head);
 }
 
-h3 {
+h3 a {
   font-weight: var(--fw-bold);
   font-family: var(--ff-head);
   color: var(--secondary-text-color);
+}
+
+.nav-list li a {
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-reg);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.heading h2 {
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-head);
+}
+
+.heading p {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-sub);
+  color: #e4dfdf;
+}
+
+label {
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-reg);
+  font-size: 0.7rem;
+}
+
+strong a {
+  font-weight: var(--fw-bold);
+  font-size: 0.8rem;
+  color: var(--primary-btn);
+}
+
+.inner-sub {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-sub);
+  color: #e4dfdf;
+  font-size: 0.8rem;
 }
 
 /* ==== Main ===== */
@@ -102,13 +139,6 @@ h3 {
   text-align: center;
   margin: 0 auto;
   padding: 1em;
-}
-
-.nav-list li a {
-  color: var(--secondary-text-color);
-  font-weight: var(--fw-reg);
-  font-size: 0.9rem;
-  opacity: 0.7;
 }
 
 /* ==== Text Intro */
@@ -169,17 +199,6 @@ h3 i {
   padding: 0 1rem 1rem 1rem;
 }
 
-.heading h2 {
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-head);
-}
-
-.heading p {
-  font-weight: var(--fw-reg);
-  font-family: var(--ff-sub);
-  color: #e4dfdf;
-}
-
 form {
   padding: 0 1rem 1rem 1rem;
   text-align: center;
@@ -231,23 +250,7 @@ input[type="submit"] {
   text-align: left;
 }
 
-label {
-  color: var(--secondary-text-color);
-  font-weight: var(--fw-reg);
-  font-size: 0.7rem;
-}
-
-strong a {
-  font-weight: var(--fw-bold);
-  font-size: 0.8rem;
-  color: var(--primary-btn);
-}
-
 .inner-sub {
-  font-weight: var(--fw-reg);
-  font-family: var(--ff-sub);
-  color: #e4dfdf;
-  font-size: 0.8rem;
   text-align: center;
   width: 100%;
 }
