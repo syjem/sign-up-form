@@ -213,22 +213,13 @@ input {
 }
 
 input:focus {
-  outline-color: var(--primary-btn);
-}
-
-input[type="text"] {
-  flex: 1;
-  margin: 0 0 1.5rem 0;
+  outline: 0;
 }
 
 input[type="email"],
 input[type="password"] {
   display: block;
   width: 100%;
-}
-
-input[type="password"] {
-  margin: 1.5rem 0 0.3rem 0;
 }
 
 input[type="submit"] {
@@ -241,13 +232,27 @@ input[type="submit"] {
   justify-content: space-between;
 }
 
-.wrapper-sub-form {
-  width: 100%;
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control.text {
+  flex: 1;
+}
+
+.error {
+  color: #d06b73;
+  font-size: 0.8rem;
+  text-align: start;
+  padding-left: 0.3rem;
+  height: 1.125rem;
+  margin: 0.3rem 0;
 }
 
 .checkbox {
-  margin: 1rem 0;
   text-align: left;
+  margin-bottom: 0.3rem;
 }
 
 .inner-sub {
@@ -285,12 +290,7 @@ span {
 }
 
 .invalid {
-  border-color: #e01f2f;
-}
-
-.agree {
-  color: #e01f2f;
-  font-size: 0.8rem;
+  border-color: red;
 }
 
 @media screen and (max-width: 874px) {

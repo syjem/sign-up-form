@@ -1,88 +1,90 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const formSubmit = document.querySelector("form");
-  const firstName = document.getElementById("first-name");
-  const lastName = document.getElementById("last-name");
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  const checkbox = document.getElementById("checkbox-terms");
-  const terms = document.querySelector(".terms");
+const formSubmit = document.querySelector("form");
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const checkbox = document.getElementById("checkbox-terms");
 
-  firstName.addEventListener("keyup", () => {
-    firstName.value.length < 3
-      ? (firstName.className = "invalid")
-      : (firstName.className = "valid");
-  });
+formSubmit.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-  lastName.addEventListener("keyup", () => {
-    lastName.value.length < 3
-      ? (lastName.className = "invalid")
-      : (lastName.className = "valid");
-  });
-
-  const checkEmail = (str) => {
-    const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regEx.test(str);
-  };
-
-  email.addEventListener("input", () => {
-    if (!checkEmail(email.value)) {
-      email.className = "invalid";
-    } else {
-      email.className = "valid";
-    }
-  });
-
-  const checkPassword = (str) => {
-    const re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    return re.test(str);
-  };
-
-  password.addEventListener("keyup", () => {
-    if (!checkPassword(password.value)) {
-      password.className = "invalid";
-    } else {
-      password.className = "valid";
-    }
-  });
-
-  formSubmit.addEventListener("submit", (e) => {
-    const firstNameValue = firstName.value;
-    const lastNameValue = lastName.value;
-    const passwordValue = password.value;
-
-    if (firstNameValue.length < 3) {
-      firstName.className = "invalid";
-      e.preventDefault();
-    } else {
-      firstName.className = "valid";
-    }
-
-    if (lastNameValue.length < 3) {
-      lastName.className = "invalid";
-      e.preventDefault();
-    } else {
-      lastName.className = "valid";
-    }
-
-    if (!checkPassword(passwordValue)) {
-      password.className = "invalid";
-      e.preventDefault();
-    } else {
-      password.className = "valid";
-    }
-
-    if (!checkbox.checked) {
-      terms.innerHTML = "Please check the box to agree to our";
-      terms.classList.add("agree");
-      terms.style.color = "#e01f2f";
-      e.preventDefault();
-    }
-  });
-
-  checkbox.addEventListener("input", () => {
-    if (checkbox.checked === true) {
-      terms.innerHTML = "I agree to all statements included in";
-      terms.style.color = "#bdc5d0";
-    }
-  });
+  validateInputs();
 });
+
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.textContent = "";
+  element.classList.add("valid");
+  element.classList.remove("invalid");
+};
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.textContent = message;
+  element.classList.add("invalid");
+  element.classList.remove("valid");
+};
+
+const checkEmail = (email) => {
+  const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regEx.test(email);
+};
+
+const checkPassword = (password) => {
+  const re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  return re.test(password);
+};
+
+const validateInputs = () => {
+  const firstNameValue = firstName.value;
+  const lastNameValue = lastName.value;
+  const emailValue = email.value;
+  const passwordValue = password.value;
+
+  if (firstNameValue === "") {
+    setError(firstName, "Please, enter your first name");
+  } else if (firstNameValue.length < 2) {
+    setError(firstName, "Minimum of 2 characters");
+  } else {
+    setSuccess(firstName);
+  }
+
+  if (lastNameValue === "") {
+    setError(lastName, "Please, enter your last name");
+  } else if (lastNameValue.length < 2) {
+    setError(lastName, "Minimum of 2 characters");
+  } else {
+    setSuccess(lastName);
+  }
+
+  if (emailValue === "") {
+    setError(email, "Please, enter your email");
+  } else if (!checkEmail(emailValue)) {
+    setError(email, "Please, enter a valid email address");
+  } else {
+    setSuccess(email);
+  }
+
+  if (passwordValue === "") {
+    setError(password, "Please, enter your password");
+  } else if (!checkPassword(passwordValue)) {
+    setError(
+      password,
+      "Password must contain at least a number, an uppercase and lowercase letter, and a special character"
+    );
+  } else if (passwordValue.length < 8) {
+    setError(password, "Password must be minimum of 8 characters");
+  } else {
+    setSuccess(password);
+  }
+
+  if (!checkbox.checked) {
+    setError(checkbox, "Check the box to agree to our Terms of Service");
+  } else {
+    setSuccess(checkbox);
+  }
+};

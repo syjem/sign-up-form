@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -60,53 +60,60 @@
             to build basic websites and then build interactive web apps.
           </p>
         </div>
-        <form action="https://www.google.com" method="post">
-          <div class="wrapper-sub-form">
-            <div class="form-group">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="First Name"
-                required
-              />
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                placeholder="Last Name"
-                required
-              />
-            </div>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Password must contain at least a number, an uppercase and lowercase letter, a special character, and minimum of 8 characters"
-              required
-            />
-            <div class="checkbox">
-              <input type="checkbox" name="terms" id="checkbox-terms" />
-              <label for="checkbox-terms">
-                <span class="terms">I agree to all statements included in</span>
-                <strong><a href="#">Terms of Service</a></strong>
-              </label>
-            </div>
-            <input
-              class="btn btn-submit"
-              type="submit"
-              value="Start Coding Now"
-            />
+        <form action="/" method="post">
+          <div class="form-group">
+              <div class="form-control text">
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder="First Name"
+                />
+                <div class="error"></div>
+              </div>
+              <div class="form-control text">
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Last Name"
+                />
+                <div class="error"></div>
+              </div>
           </div>
+          <div class="form-control">
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+              />
+              <div class="error"></div>
+          </div>
+          <div class="form-control">
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must contain at least a number, an uppercase and lowercase letter, a special character, and minimum of 8 characters"
+              />
+              <div class="error"></div>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="terms" id="checkbox-terms" />
+            <label for="checkbox-terms">
+              <span class="terms">I agree to all statements included in</span>
+              <strong><a href="#">Terms of Service</a></strong>
+            </label>
+            <div class="error"></div>
+          </div>
+          <input
+            class="btn btn-submit"
+            type="submit"
+            value="Start Coding Now"
+          />
           <p class="inner-sub">Or continue with this social profile</p>
           <ul class="list-btn">
             <li>
