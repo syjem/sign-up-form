@@ -62,44 +62,39 @@
         </div>
         <form action="/" method="post">
           <div class="form-group">
-              <div class="form-control text">
-                <input
-                  type="text"
-                  name="first-name"
-                  id="first-name"
-                  placeholder="First Name"
-                />
-                <div class="error"></div>
-              </div>
-              <div class="form-control text">
-                <input
-                  type="text"
-                  name="last-name"
-                  id="last-name"
-                  placeholder="Last Name"
-                />
-                <div class="error"></div>
-              </div>
+            <div class="form-control text">
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="First Name"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="form-control text">
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Last Name"
+              />
+              <div class="error"></div>
+            </div>
+          </div>
+          <div class="form-control">
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <div class="error"></div>
           </div>
           <div class="form-control">
             <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-              />
-              <div class="error"></div>
-          </div>
-          <div class="form-control">
-            <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Password must contain at least a number, an uppercase and lowercase letter, a special character, and minimum of 8 characters"
-              />
-              <div class="error"></div>
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Password must contain at least a number, an uppercase and lowercase letter, a special character, and minimum of 8 characters"
+            />
+            <div class="error"></div>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="terms" id="checkbox-terms" />
