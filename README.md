@@ -8,7 +8,7 @@ This is my solution to [The Odin Project Sign-up Form](https://www.theodinprojec
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
+- [Credits](#credits)
 
 ## Overview
 
