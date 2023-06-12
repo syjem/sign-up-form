@@ -295,7 +295,7 @@ span {
 
 @media screen and (max-width: 874px) {
   .main {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .header {
