@@ -100,9 +100,9 @@ strong a {
 
 .main {
   display: flex;
-  max-width: 100%;
-  margin: 2rem 2.5rem;
-  min-width: 330px;
+  max-width: 90rem;
+  margin: 0 auto;
+  min-width: 20rem;
 }
 
 /* ==== Main Content Section */
@@ -117,7 +117,7 @@ strong a {
   background-size: cover;
   background-blend-mode: multiply;
   background-color: var(--background-color);
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .nav {
@@ -208,7 +208,7 @@ input {
   padding: 0.5rem;
   border-radius: 0.5rem;
   background-color: transparent;
-  border: 2px solid var(--secondary-text-color);
+  border: 0.125rem solid var(--secondary-text-color);
   color: var(--text-color);
 }
 
@@ -293,7 +293,7 @@ span {
   border-color: red;
 }
 
-@media screen and (max-width: 874px) {
+@media screen and (max-width: 54.625rem) {
   .main {
     flex-direction: column;
   }
@@ -325,14 +325,14 @@ span {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   .form-group {
     flex-direction: column;
     gap: 0;
   }
 }
 
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 32.188rem) {
   .main {
     margin: 0.2rem;
   }
@@ -346,7 +346,7 @@ span {
   }
 
   .main-content {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .nav .nav-list li {
