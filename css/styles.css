@@ -103,6 +103,7 @@ strong a {
   max-width: 90rem;
   margin: 0 auto;
   min-width: 20rem;
+  padding: 0.8rem;
 }
 
 /* ==== Main Content Section */
@@ -293,9 +294,12 @@ span {
   border-color: red;
 }
 
+/* ==== MEdia Queries ==== */
+
 @media screen and (max-width: 54.625rem) {
   .main {
     flex-direction: column;
+    padding: 0;
   }
 
   .header {
